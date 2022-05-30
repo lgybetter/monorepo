@@ -1,0 +1,17 @@
+{
+  "name": "@betterlin/console",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "npm run build:lib && npm run build:es",
+    "build:lib": "rm -rf lib && tsc -b tsconfig.json",
+    "build:es": "rm -rf es && tsc -p tsconfig.json -m es2015 --outDir es"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@betterlin/logger": "workspace:^1.0.0"
+  }
+}

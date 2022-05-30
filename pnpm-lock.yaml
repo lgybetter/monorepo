@@ -1,0 +1,15 @@
+lockfileVersion: 5.3
+
+importers:
+
+  .:
+    specifiers: {}
+
+  packages/console:
+    specifiers:
+      '@betterlin/logger': workspace:^1.0.0
+    dependencies:
+      '@betterlin/logger': link:../logger
+
+  packages/logger:
+    specifiers: {}
