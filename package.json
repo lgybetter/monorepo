@@ -21,9 +21,13 @@
     "@changesets/cli": "^2.23.0",
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.17.0",
     "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.7.3"
   },
@@ -31,5 +35,11 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
